@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title> Mystery Modified </title>
+        <link rel="stylesheet" type="text/css" href="style.css"
+    </head>
+    <body>
+        <div class="nav-bar">
+            <div class="nav-menu">
+                <i class="fa fa-bars button"></i>
+            </div>
+        </div>
+        <div class="social-bar">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-pinterest"></i>        
+        </div>
+        <div class="page" id="home">
+             <div class="showcase">
+                  <img src="img/MysteryBG.jpg">
+             </div>
+        </div>
+        <div id="logo">
+            <p class="light-logo">Mystery</p>
+            <p class="strong-logo">Modified</p>
+        </div>
+        <div class="arrow-btn" onclick="showGallery(true);">
+            <i class="fas fa-chevron-down button"></i>
+        </div>
+        <div id="gallery" class="page">
+            <div id="logo-gallery">
+                <p class="strong-logo" onclick="showGallery(true);">Modified
+            </div>
+        <div id="slide" class="slideshow">
+            <div class="card">
+                <img src="img/MyCar1.jpg">
+            </div><div class="card">
+                <img src="img/MyCar2.jpg">
+            </div><div class="card">
+                <img src="img/MyCar3.jpg">
+            </div><div class="card">
+                <img src="img/MyCar4.jpg">
+            </div><div class="card">
+                <img src="img/MyCar5.jpg">
+            </div>
+        </div>
+        <div class="buttons">
+            <i class="fas fa-chevron-left button"></i>
+            <i class="fab fa-chevron-right button"></i>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    function showGallery(argument) {
+        //body
+        let home = document.getElementById('home');
+        let logoG = document.getElementById('logo-gallery');
+        let gallery = document.getElementById('gallery');
+        let slide = document.getElementById('slide');
+        if (argument) {
+            home.classList.add('hideHome');
+            logoG.classList.add('logo-gallery-show');
+            slide.classList.add('showSlide');
+            gallery.classList.add('showGallery');
+        }
+        else {
+            home.classList.remove('hideHome');
+            logoG.classList.remove('logo-gallery-show');
+            slide.classList.remove('showSlide');
+            gallery.classList.remove('showGallery');
+        }
+</script>

@@ -1,0 +1,173 @@
+@import "_config.css";
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav-bar i {
+  padding: 5px;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 30px;
+  left: 60px;
+}
+
+.social-bar {
+  position: fixed;
+  top: 30px;
+  right: 60px;
+}
+
+.social-bar i {margin-left: 10px;}
+
+.arrow-btn {
+  padding: 10px;
+  margin-top: 60px;
+  text-align: center;
+  animation-name: arrow;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow{
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+#home {
+  transition: 1s;
+  transition-delay: 0.5s;
+  background-image: url("img/MysteryBG.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
+
+#home .showcaseHome {
+  width: 100%;
+  padding-top: 20vh;
+  text-align: center;
+}
+
+#home .showcaseHome img {
+  height: 60vh;
+  opacity: 0.7;
+}
+
+.hideHome {
+  transform: translateY(-100%);
+}
+
+#logo {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  color: var(--main-Color);
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+}
+
+#logo .light-logo {
+  margin: 0;
+}
+
+#logo .strong-logo {
+  margin: 0;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+#gallery {
+  background: url("img/GalleryBG.jpg");
+  background-position: top;
+  background-size: cover;
+  transform: translateY(100%);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.showGallery {
+  transform: translateY(0%) !important;
+}
+
+#logo-gallery {
+  cursor: pointer;
+  padding-top: 20px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 1.8s;
+  transform: translateY(-40px);
+}
+
+.logo-gallery-show {
+  font-weight: bold;
+  opacity: 1 !important;
+  color: var(--main-Color);
+  transform: translateY(0px) !important;
+}
+
+.slideshow {
+  text-align: center;
+  margin-top: 30vh;
+  overflow: hidden;
+  height: 420px;
+  transform: translateX(70%);
+  transition: 0.8s;
+  transition-delay: 1.5s;
+  opacity: 0;
+  transition-timing-function: ease-out;
+}
+
+.card {
+  padding: 10px;
+  overflow: hidden;
+  margin-left: 40px;
+  width: 200px;
+  height: 300px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.card img {
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.card img:hover {
+  width: 110%;
+  transition: translateX(0%);
+}
+
+.showSlide {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.buttons{
+    width: 100%;
+    text-align: center;
+}
+
+.buttons i {
+  width: 30px;
+}
